@@ -1,0 +1,263 @@
+2019-11-20 16:47:23.414 [http-nio-18080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'  
+2019-11-20 16:47:23.415 [http-nio-18080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'  
+2019-11-20 16:47:23.415 [http-nio-18080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver  
+2019-11-20 16:47:23.419 [http-nio-18080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data  
+2019-11-20 16:47:23.419 [http-nio-18080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms  
+2019-11-20 16:47:23.426 [http-nio-18080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/test", parameters={}  
+2019-11-20 16:47:23.429 [http-nio-18080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to public java.lang.String com.citic.controller.push.PushController.test() throws java.lang.InterruptedException,java.util.concurrent.ExecutionException,javax.net.ssl.SSLException,java.io.IOException  
+148f97d63f45d173f26c2dd9e8875510fb725c77d02c108aa5376fc5f6018f6b
+2019-11-20 16:47:24.220 [http-nio-18080-exec-1] DEBUG io.netty.util.internal.NativeLibraryLoader - -Dio.netty.native.workdir: C:\Users\linge\AppData\Local\Temp (io.netty.tmpdir)  
+2019-11-20 16:47:24.220 [http-nio-18080-exec-1] DEBUG io.netty.util.internal.NativeLibraryLoader - -Dio.netty.native.deleteLibAfterLoading: true  
+2019-11-20 16:47:24.220 [http-nio-18080-exec-1] DEBUG io.netty.util.internal.NativeLibraryLoader - -Dio.netty.native.tryPatchShadedId: true  
+2019-11-20 16:47:24.229 [http-nio-18080-exec-1] DEBUG io.netty.util.internal.NativeLibraryLoader - Unable to load the library 'netty_tcnative_windows_x86_64', trying other loading mechanism.  
+java.lang.UnsatisfiedLinkError: no netty_tcnative_windows_x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.loadLibrary0(Unknown Source)
+	at java.lang.System.loadLibrary(Unknown Source)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:369)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:361)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:96)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:554)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:135)
+	at com.turo.pushy.apns.ApnsClientBuilder.build(ApnsClientBuilder.java:519)
+	at com.citic.utils.ApnsSendOperate.getApnsClient(ApnsSendOperate.java:51)
+	at com.citic.controller.push.PushController.test(PushController.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2019-11-20 16:47:24.235 [http-nio-18080-exec-1] DEBUG io.netty.util.internal.NativeLibraryLoader - netty_tcnative_windows_x86_64 cannot be loaded from java.library.path, now trying export to -Dio.netty.native.workdir: C:\Users\linge\AppData\Local\Temp  
+java.lang.UnsatisfiedLinkError: no netty_tcnative_windows_x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.loadLibrary0(Unknown Source)
+	at java.lang.System.loadLibrary(Unknown Source)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:349)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.util.internal.NativeLibraryLoader.loadFirstAvailable(NativeLibraryLoader.java:96)
+	at io.netty.handler.ssl.OpenSsl.loadTcNative(OpenSsl.java:554)
+	at io.netty.handler.ssl.OpenSsl.<clinit>(OpenSsl.java:135)
+	at com.turo.pushy.apns.ApnsClientBuilder.build(ApnsClientBuilder.java:519)
+	at com.citic.utils.ApnsSendOperate.getApnsClient(ApnsSendOperate.java:51)
+	at com.citic.controller.push.PushController.test(PushController.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_tcnative_windows_x86_64 in java.library.path
+		at java.lang.ClassLoader.loadLibrary(Unknown Source)
+		at java.lang.Runtime.loadLibrary0(Unknown Source)
+		at java.lang.System.loadLibrary(Unknown Source)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+		at java.lang.reflect.Method.invoke(Unknown Source)
+		at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:369)
+		at java.security.AccessController.doPrivileged(Native Method)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:361)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+		... 61 common frames omitted
+2019-11-20 16:47:24.352 [http-nio-18080-exec-1] DEBUG io.netty.util.internal.NativeLibraryLoader - Successfully loaded the library C:\Users\linge\AppData\Local\Temp\netty_tcnative_windows_x86_642416431828222431568.dll  
+2019-11-20 16:47:24.353 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.OpenSsl - Initialize netty-tcnative using engine: 'default'  
+2019-11-20 16:47:24.353 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.OpenSsl - netty-tcnative using native library: BoringSSL  
+2019-11-20 16:47:24.359 [http-nio-18080-exec-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true  
+2019-11-20 16:47:24.359 [http-nio-18080-exec-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true  
+2019-11-20 16:47:24.359 [http-nio-18080-exec-1] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2f93d484  
+2019-11-20 16:47:24.361 [http-nio-18080-exec-1] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled  
+2019-11-20 16:47:24.361 [http-nio-18080-exec-1] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0  
+2019-11-20 16:47:24.361 [http-nio-18080-exec-1] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384  
+2019-11-20 16:47:24.363 [http-nio-18080-exec-1] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@a92a1f  
+2019-11-20 16:47:24.368 [http-nio-18080-exec-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096  
+2019-11-20 16:47:24.368 [http-nio-18080-exec-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxSharedCapacityFactor: 2  
+2019-11-20 16:47:24.368 [http-nio-18080-exec-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.linkCapacity: 16  
+2019-11-20 16:47:24.368 [http-nio-18080-exec-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8  
+2019-11-20 16:47:24.386 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256  
+2019-11-20 16:47:24.386 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 => ECDHE-ECDSA-AES128-GCM-SHA256  
+2019-11-20 16:47:24.386 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256  
+2019-11-20 16:47:24.386 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_GCM_SHA256 => ECDHE-RSA-AES128-GCM-SHA256  
+2019-11-20 16:47:24.386 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384  
+2019-11-20 16:47:24.386 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 => ECDHE-ECDSA-AES256-GCM-SHA384  
+2019-11-20 16:47:24.386 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384  
+2019-11-20 16:47:24.386 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_GCM_SHA384 => ECDHE-RSA-AES256-GCM-SHA384  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-ECDSA-CHACHA20-POLY1305  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-RSA-CHACHA20-POLY1305  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256 => ECDHE-PSK-CHACHA20-POLY1305  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_128_CBC_SHA => ECDHE-ECDSA-AES128-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_128_CBC_SHA => ECDHE-RSA-AES128-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_128_CBC_SHA => ECDHE-PSK-AES128-CBC-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_ECDSA_WITH_AES_256_CBC_SHA => ECDHE-ECDSA-AES256-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_RSA_WITH_AES_256_CBC_SHA => ECDHE-RSA-AES256-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_ECDHE_PSK_WITH_AES_256_CBC_SHA => ECDHE-PSK-AES256-CBC-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_RSA_WITH_AES_128_GCM_SHA256 => AES128-GCM-SHA256  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_RSA_WITH_AES_256_GCM_SHA384 => AES256-GCM-SHA384  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_RSA_WITH_AES_128_CBC_SHA => AES128-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_RSA_WITH_AES_128_CBC_SHA => AES128-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_PSK_WITH_AES_128_CBC_SHA => PSK-AES128-CBC-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_RSA_WITH_AES_256_CBC_SHA => AES256-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_RSA_WITH_AES_256_CBC_SHA => AES256-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_PSK_WITH_AES_256_CBC_SHA => PSK-AES256-CBC-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: TLS_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.CipherSuiteConverter - Cipher suite mapping: SSL_RSA_WITH_3DES_EDE_CBC_SHA => DES-CBC3-SHA  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.OpenSsl - Supported protocols (OpenSSL): [SSLv2Hello, TLSv1, TLSv1.1, TLSv1.2, TLSv1.3]   
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] DEBUG io.netty.handler.ssl.OpenSsl - Default cipher suites (OpenSSL): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]  
+2019-11-20 16:47:24.387 [http-nio-18080-exec-1] INFO  com.turo.pushy.apns.ApnsClientBuilder - Native SSL provider is available; will use native provider.  
+2019-11-20 16:47:24.400 [http-nio-18080-exec-1] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6737d44c  
+2019-11-20 16:47:24.425 [http-nio-18080-exec-1] DEBUG io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 24  
+2019-11-20 16:47:24.427 [http-nio-18080-exec-1] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false  
+2019-11-20 16:47:24.428 [http-nio-18080-exec-1] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512  
+2019-11-20 16:47:24.450 [http-nio-18080-exec-1] DEBUG i.n.r.dns.DefaultDnsServerAddressStreamProvider - Default DNS servers: [/192.168.43.1:53] (sun.net.dns.ResolverConfiguration)  
+2019-11-20 16:47:24.457 [http-nio-18080-exec-1] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false  
+2019-11-20 16:47:24.457 [http-nio-18080-exec-1] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false  
+2019-11-20 16:47:25.004 [http-nio-18080-exec-1] DEBUG io.netty.util.NetUtil - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)  
+2019-11-20 16:47:25.004 [http-nio-18080-exec-1] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200  
+2019-11-20 16:47:25.551 [http-nio-18080-exec-1] INFO  com.citic.controller.push.PushController - token :351bf5a20a6fce9f5b6c17c8f3090d0c659818b8097e6bdfb3ee02bc54d84957title :标题body :都是好朋友  
+2019-11-20 16:47:25.566 [nioEventLoopGroup-4-1] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 23000 (auto-detected)  
+2019-11-20 16:47:26.178 [nioEventLoopGroup-4-1] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: dc:8b:28:ff:fe:87:8a:9d (auto-detected)  
+2019-11-20 16:47:26.199 [nioEventLoopGroup-4-1] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@31b78c86  
+2019-11-20 16:47:26.229 [nioEventLoopGroup-4-1] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@17afa3b  
+2019-11-20 16:47:26.236 [nioEventLoopGroup-4-1] DEBUG io.netty.resolver.dns.DnsQueryContext - [id: 0xdaabee8b] WRITE: [51062: /192.168.43.1:53], DefaultDnsQuestion(api.development.push.apple.com. IN A)  
+2019-11-20 16:47:26.242 [nioEventLoopGroup-4-1] DEBUG io.netty.resolver.dns.DnsQueryContext - [id: 0xdaabee8b] WRITE: [21143: /192.168.43.1:53], DefaultDnsQuestion(api.development.push.apple.com. IN AAAA)  
+2019-11-20 16:47:26.289 [nioEventLoopGroup-4-1] DEBUG io.netty.resolver.dns.DnsNameResolver - [id: 0xdaabee8b] RECEIVED: [51062: /192.168.43.1:53], DatagramDnsResponse(from: /192.168.43.1:53, to: /0:0:0:0:0:0:0:0:53902, 51062, QUERY(0), NoError(0), RD RA)
+	DefaultDnsQuestion(api.development.push.apple.com. IN A)
+	DefaultDnsRawRecord(api.development.push.apple.com. 1 IN CNAME 39B)
+	DefaultDnsRawRecord(api.sandbox.push-apple.com.akadns.net. 1 IN A 4B)  
+2019-11-20 16:47:26.290 [nioEventLoopGroup-4-1] DEBUG io.netty.resolver.dns.DnsQueryContext - [id: 0xdaabee8b] WRITE: [24893: /192.168.43.1:53], DefaultDnsQuestion(api.sandbox.push-apple.com.akadns.net. IN A)  
+2019-11-20 16:47:26.297 [nioEventLoopGroup-4-1] DEBUG io.netty.resolver.dns.DnsNameResolver - [id: 0xdaabee8b] RECEIVED: [24893: /192.168.43.1:53], DatagramDnsResponse(from: /192.168.43.1:53, to: /0:0:0:0:0:0:0:0:53902, 24893, QUERY(0), NoError(0), RD RA)
+	DefaultDnsQuestion(api.sandbox.push-apple.com.akadns.net. IN A)
+	DefaultDnsRawRecord(api.sandbox.push-apple.com.akadns.net. 1 IN A 4B)  
+2019-11-20 16:47:26.302 [nioEventLoopGroup-4-1] DEBUG io.netty.resolver.dns.DnsNameResolver - [id: 0xdaabee8b] RECEIVED: [21143: /192.168.43.1:53], DatagramDnsResponse(from: /192.168.43.1:53, to: /0:0:0:0:0:0:0:0:53902, 21143, QUERY(0), NoError(0), RD RA)
+	DefaultDnsQuestion(api.development.push.apple.com. IN AAAA)
+	DefaultDnsRawRecord(api.development.push.apple.com. 1 IN CNAME 39B)
+	DefaultDnsRawRecord(akadns.net. 1 IN SOA 51B)  
+2019-11-20 16:47:26.303 [nioEventLoopGroup-4-1] DEBUG io.netty.resolver.dns.DnsQueryContext - [id: 0xdaabee8b] WRITE: [34374: /192.168.43.1:53], DefaultDnsQuestion(api.sandbox.push-apple.com.akadns.net. IN AAAA)  
+2019-11-20 16:47:26.306 [nioEventLoopGroup-4-1] DEBUG io.netty.resolver.dns.DnsNameResolver - [id: 0xdaabee8b] RECEIVED: [34374: /192.168.43.1:53], DatagramDnsResponse(from: /192.168.43.1:53, to: /0:0:0:0:0:0:0:0:53902, 34374, QUERY(0), NoError(0), RD RA)
+	DefaultDnsQuestion(api.sandbox.push-apple.com.akadns.net. IN AAAA)  
+2019-11-20 16:47:27.009 [nioEventLoopGroup-4-1] DEBUG io.netty.handler.ssl.SslHandler - [id: 0xa160d282, L:/192.168.43.153:53916 - R:api.development.push.apple.com/17.188.138.73:443] HANDSHAKEN: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256  
+----------------success-------------
+2019-11-20 16:47:31.058 [http-nio-18080-exec-1] INFO  com.citic.controller.push.PushController - 1Push notification accepted by APNs gateway.  
+2019-11-20 16:47:31.061 [nioEventLoopGroup-4-1] INFO  com.citic.controller.push.PushController - 4pushNotificationResponse.getRejectionReason() { }  
+2019-11-20 16:47:31.087 [http-nio-18080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'text/html', given [text/html, application/xhtml+xml, image/webp, image/apng, application/signed-exchange;v=b3, application/xml;q=0.9, */*;q=0.8] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]  
+2019-11-20 16:47:31.087 [http-nio-18080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing ["hello world! true"]  
+2019-11-20 16:47:31.093 [http-nio-18080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK  
